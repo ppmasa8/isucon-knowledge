@@ -176,13 +176,43 @@ read_rnd_buffer_size = 4M
 
 `performance_schema = OFF`
 
-
+## 注意事項
 これらの調整を行う際は、以下の点に注意してください：
 
 変更の前後でベンチマークを実行し、効果を測定します。
 システムのリソース（特にメモリ）を常に監視します。
 一度に多くの変更を行わず、1つずつ調整して効果を確認します。
 アプリケーションの特性や要件に基づいて調整します。
+
+## FAQ
+### Nginx の設定ファイルどこ？
+メイン設定ファイル:`/etc/nginx/nginx.conf`
+
+サイト固有の設定ファイル（通常は nginx.conf から include されます）:
+```
+/etc/nginx/sites-available/default
+/etc/nginx/sites-enabled/default
+```
+
+モジュール設定ファイル:
+
+`/etc/nginx/modules-enabled/`
+
+### MySQL の設定ファイルどこ？
+
+メイン設定ファイル:`/etc/mysql/my.cnf`
+MySQL 5.7 以降では、以下のファイルも使用されることがあります:`/etc/mysql/mysql.conf.d/mysqld.cnf`
+
+カスタム設定ファイル（通常は my.cnf から !includedir で指定されます）:`/etc/mysql/conf.d/*.cnf`
+
+### 注意点:
+ISUCON のような特殊な環境では、これらのパスが異なる場合があります。
+設定ファイルの場所を確認するには、以下のコマンドが役立つことがあります:
+Nginx: `nginx -t`（設定ファイルの構文チェックと場所の表示）
+MySQL: `mysql --help | grep "Default options"` （設定ファイルの読み込み順序の表示）
+設定を変更した後は、必ずサービスを再起動する必要があります:
+Nginx: `sudo systemctl restart nginx`
+MySQL: `sudo systemctl restart mysql`
 
 # Ref
 - https://blog.p1ass.com/posts/isucon13/
