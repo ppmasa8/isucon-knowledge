@@ -217,4 +217,5 @@ MySQL: `sudo systemctl restart mysql`
 # Ref
 - https://blog.p1ass.com/posts/isucon13/
 - https://gist.github.com/HirokiYoshida837/812b89e58da3ba2fe37c103d2b4dbd2d
+- https://ai-techblog.hatenablog.com/entry/2023/05/28/105447
 - https://zenn.dev/vaxila_labs/articles/218d01ffbbb0f3
