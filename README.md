@@ -4,7 +4,7 @@
 - discordのisucon事前課題(7/31のやつのみ)
 - tailscale調査&整備
 - otel+jaeger調査&整備
-- 過去問
+- [過去問 on AWS](https://github.com/matsuu/aws-isucon/tree/main)
 - メンバー集め(インターネットゼミで誘ってみる)
 
 # 当日やること
