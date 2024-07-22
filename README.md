@@ -218,6 +218,7 @@ MySQL: `sudo systemctl restart mysql`
 - https://blog.p1ass.com/posts/isucon13/
 - https://isucon.net/archives/56842718.html
 - https://zenn.dev/tohutohu/articles/923bdf5dcd73af
+- https://blog.sakamo.dev/post/isucon13/
 - https://gist.github.com/HirokiYoshida837/812b89e58da3ba2fe37c103d2b4dbd2d
 - https://ai-techblog.hatenablog.com/entry/2023/05/28/105447
 - https://zenn.dev/vaxila_labs/articles/218d01ffbbb0f3
