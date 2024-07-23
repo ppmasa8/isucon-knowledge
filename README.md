@@ -2,7 +2,7 @@
 
 # 当日までにやること
 - discordのisucon事前課題(7/31のやつのみ)
-- otelやtailscaleを使わない簡便な構成(7/31のやつのみ)
+- otelやtailscaleを使わない簡便な構成(7/31のやつのみ, 参考：https://github.com/narusejun/isucon-app-scaffold)
 - tailscale調査&整備
 - otel+jaeger調査&整備
 - [過去問 on AWS](https://github.com/matsuu/aws-isucon/tree/main)
