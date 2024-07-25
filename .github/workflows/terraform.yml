@@ -4,9 +4,11 @@ on:
   push:
     paths:
       - 'private-isu/main.tf'
+      - '.github/workflows/terraform.yml'
   pull_request:
     paths:
       - 'private-isu/main.tf'
+      - '.github/workflows/terraform.yml'
 
 jobs:
   terraform:
