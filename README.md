@@ -3,7 +3,7 @@
 # 練習の順番
 - private-isu
 - isucon13
-- 12
+- isucon12
 
 # 当日までにやること
 - discordのisucon事前課題(7/31のやつのみ)
