@@ -31,7 +31,7 @@ resource "aws_security_group" "private_isu_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  # 全てのアウトバウンドトラフィックを許可
+  # 全てのアウトバウンドトラフィックを許可.
   egress {
     from_port   = 0
     to_port     = 0
