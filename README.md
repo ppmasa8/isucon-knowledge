@@ -12,6 +12,7 @@
 - otel+jaeger調査&整備
 - [過去問 on AWS](https://github.com/matsuu/aws-isucon/tree/main)
 - [private-isu](https://github.com/catatsuy/private-isu)
+- https://giarrium.hatenablog.com/entry/2023/12/17/130000
  - https://zenn.dev/howtelevision/articles/74a33ec0e327c0
 - メンバー集め(インターネットゼミで誘ってみる)
 
