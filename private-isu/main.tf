@@ -31,6 +31,22 @@ resource "aws_security_group" "private_isu_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  # pprof
+  ingress {
+    from_port   = 6060
+    to_port     = 6060
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  # pprof
+  ingress {
+    from_port   = 1080
+    to_port     = 1080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   # 全てのアウトバウンドトラフィックを許可.
   egress {
     from_port   = 0
