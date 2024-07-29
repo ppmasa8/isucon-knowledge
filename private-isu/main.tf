@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_security_group" "private_isu_sg" {
-  name        = "private-isu-sg"
+  name        = "private-isu-sg-1"
   description = "Security group for private-isu servers"
 
   ingress {
