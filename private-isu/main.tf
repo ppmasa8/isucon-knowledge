@@ -2,57 +2,14 @@ provider "aws" {
   region = "ap-northeast-1"  # 東京リージョン
 }
 
-# セキュリティグループの作成
 resource "aws_security_group" "private_isu_sg" {
   name        = "private-isu-sg"
   description = "Security group for private-isu servers"
 
-  # SSHアクセス
-  ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
+  # ルールはここでは定義しません。インポート後に追加します。
 
-  # HTTPアクセス
-  ingress {
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  # HTTPSアクセス
-  ingress {
-    from_port   = 443
-    to_port     = 443
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  # pprof
-  ingress {
-    from_port   = 6060
-    to_port     = 6060
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  # pprof
-  ingress {
-    from_port   = 1080
-    to_port     = 1080
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  # 全てのアウトバウンドトラフィックを許可.
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
+  tags = {
+    Name = "private-isu-sg"
   }
 }
 
@@ -89,4 +46,55 @@ output "competition_server_public_ip" {
 
 output "benchmark_server_public_ip" {
   value = aws_instance.benchmark_server.public_ip
+}
+
+resource "aws_security_group" "private_isu_sg" {
+  name        = "private-isu-sg"
+  description = "Security group for private-isu servers"
+
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 6060
+    to_port     = 6060
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 1080
+    to_port     = 1080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "private-isu-sg"
+  }
 }
