@@ -17,7 +17,6 @@
 - [private-isu](https://github.com/catatsuy/private-isu)
 - https://giarrium.hatenablog.com/entry/2023/12/17/130000
  - https://zenn.dev/howtelevision/articles/74a33ec0e327c0
-- メンバー集め(KevinMX誘う)
 
 # 当日やること
 - インスタンス+ssh+初期設定
